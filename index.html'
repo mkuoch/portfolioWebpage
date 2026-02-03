@@ -27,7 +27,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
       <div class="container-fluid">
-        <a class="navbar-brand fw-semibold" href="index.html"> 	Melody Kuoch</a>
+        <a class="navbar-brand fw-semibold" href="home.html"> 	Melody Kuoch</a>
 
         <button
           class="navbar-toggler"
