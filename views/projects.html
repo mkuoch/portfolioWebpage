@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Melody Kuoch HomePage</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../resources/css/style.css" />
+  </head>
+
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="home.html">Melody Kuoch</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hobbies.html">Hobbies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+          </ul>
+
+          <span class="navbar-text fs-4">
+            <i class="bi bi-stars" aria-hidden="true"></i>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- ACCORDION -->
+<div class="container my-4">
+  <div class="accordion" id="projectsAccordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          Skateboard Shelf
+        </button>
+      </h2>
+
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse show"
+        aria-labelledby="headingOne"
+        data-bs-parent="#projectsAccordion"
+      >
+        <div class="accordion-body">
+          
+          <!-- GRID INSIDE ACCORDION BODY -->
+          <div class="row align-items-center g-4">
+            
+            <!-- LEFT: IMAGE -->
+            <div class="col-12 col-md-4">
+              <img
+                src="https://i.pinimg.com/736x/c9/e4/6a/c9e46a935c080fd63eb3294cc998a400.jpg"
+                alt="Skateboards"
+                class="img-fluid rounded"
+                style="max-height: 180px; object-fit: contain;"
+              />
+            </div>
+
+            <!-- RIGHT: TEXT -->
+            <div class="col-12 col-md-8">
+              <h5 class="fw-semibold mb-2">Skateboard Shelf</h5>
+              <p class="mb-3">
+                Three hand painted skateboards, layered on threaded rods. Designed in Solidworks and reiterated twice with steel cables crossed in the back of the boards to increase stability. 
+              </p>
+              <a href="projectDetailsSkate.html" class="btn btn-primary">View project</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- ACCORDION 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button"
+          data-bs-toggle="collapse" data-bs-target="#projTwo">
+          Project Two
+        </button>
+      </h2>
+      <div id="projTwo" class="accordion-collapse collapse"
+        data-bs-parent="#projectsAccordion">
+        <div class="accordion-body">
+          <div class="row align-items-center g-4">
+
+            <div class="col-12 col-md-4">
+              <img
+                src="YOUR_IMAGE_2"
+                class="img-fluid rounded"
+                style="height:180px; width:100%; object-fit:cover;"
+              />
+            </div>
+
+            <div class="col-12 col-md-8">
+              <h5>Poster Design</h5>
+              <p>
+                Some description of the project
+              </p>
+              <a href="projectDetails2" class="btn btn-primary">View project</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCORDION 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button"
+          data-bs-toggle="collapse" data-bs-target="#projThree">
+          Project Three
+        </button>
+      </h2>
+      <div id="projThree" class="accordion-collapse collapse"
+        data-bs-parent="#projectsAccordion">
+        <div class="accordion-body">
+          <div class="row align-items-center g-4">
+
+            <div class="col-12 col-md-4">
+              <img
+                src="YOUR_IMAGE_3"
+                class="img-fluid rounded"
+                style="height:180px; width:100%; object-fit:cover;"
+              />
+            </div>
+
+            <div class="col-12 col-md-8">
+              <h5>Web Project</h5>
+              <p>
+                some description of  a project.
+              </p>
+              <a href="projectDetails3" class="btn btn-primary">View project</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+ 
+ 
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-top py-4">
+      <div class="container d-flex justify-content-between align-items-center">
+        <span class="text-muted">© 2026 Melody Kuoch</span>
+
+        <div class="d-flex gap-3 fs-4">
+          <a
+            href="https://www.linkedin.com/in/melody-kuoch-292571273/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn profile"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
