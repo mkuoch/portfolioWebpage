@@ -1,4 +1,106 @@
+
+
 body {
-  ;
+  font-family: 'Patrick Hand';
+  letter-spacing: 0.3px;
+ color: #ffffff;
+}
+
+.home-page {
+  margin: 0;
+  background-image: url("../img/background.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.main-navbar {
+  background-color: #90879c;
+}
+
+.default-page {
+  margin: 0;
+  background-image: url("../img/default.jpg");
+ background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  }
+
+
+.default-page .main-navbar a {
+  color: #233329;
+}
+
+.default-page .main-navbar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+}
+
+.art-page {
+  margin: 0;
+  background-image: url("../img/art.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.art .main-navbar a {
+  color: #233329;
+}
+
+.hero-text {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 1.25rem 1.75rem;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  color: #2f2f2f;
+}
+
+/* Controls spacing BETWEEN project sections */
+.project-block {
+  margin-bottom: 4rem;
+}
+
+/* Controls spacing between image and caption */
+.project-block figcaption {
+  margin-top: 1.75rem;
+}
+
+
+/* Accordion header background */
+.accordion-button {
+  background-color: #6b6078;
+  color: #ffffff;
+}
+
+/* When accordion is open (expanded state) */
+.accordion-button:not(.collapsed) {
+  background-color: #6b6078;
+  color: #ffffff;
+}
+/* Accordion content area */
+.accordion-body {
+  background-color: #f5e4f3;
+  color: #4f4b3f;
+}
+
+.btn {
+  background-color: #4a5c50;
+  border-color: #4a5c50;
+  color: #ffffff;
+}
+
+.card,
+.card-body {
+  background-color: #f5e4f3;
+  color: #4f4b3f;
+}
+footer {
+  color: #ffffff;
 }
 
