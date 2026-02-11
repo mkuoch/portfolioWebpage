@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 4 - Calendar</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./resources/css/style.css">
+</head>
+
+<body class="bg-light">
+
+<!-- Create Event Button -->
+<div class="container my-4">
+  <button 
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#eventModal">
+    Create Event
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="eventModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Create Event</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <form id="event_form" class="needs-validation" novalidate>
+
+        <div class="modal-body">
+
+<!-- Category -->
+<div class="mb-3">
+  <label class="form-label">Category</label>
+  <select id="event_category" class="form-select" required>
+    <option value="" disabled selected>Select a category</option>
+    <option value="academic">Academic</option>
+    <option value="work">Work</option>
+    <option value="social">Social</option>
+    <option value="fitness">Fitness</option>
+    <option value="other">Other</option>
+  </select>
+</div>
+
+
+          <!-- Event Name -->
+          <div class="mb-3">
+            <label class="form-label">Event Name</label>
+            <input type="text" id="event_name" class="form-control" required>
+          </div>
+
+          <!-- Weekday -->
+          <div class="mb-3">
+            <label class="form-label">Weekday</label>
+            <select id="event_weekday" class="form-select" required>
+              <option value="" disabled selected>Select a day</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+              <option value="sunday">Sunday</option>
+            </select>
+          </div>
+
+          <!-- Time -->
+          <div class="mb-3">
+            <label class="form-label">Time</label>
+            <input type="time" id="event_time" class="form-control" required>
+          </div>
+
+          <!-- Modality -->
+          <div class="mb-3">
+            <label class="form-label">Event Modality</label>
+            <select 
+              id="event_modality" 
+              class="form-select"
+              required
+              onchange="updateLocationOptions(this.value)">
+              <option value="" disabled selected>Select modality</option>
+              <option value="in_person">In-Person</option>
+              <option value="remote">Remote</option>
+            </select>
+          </div>
+
+          <!-- In-Person Fields -->
+          <div id="in_person_fields" class="d-none">
+            <div class="mb-3">
+              <label class="form-label">Location</label>
+              <input type="text" id="event_location" class="form-control" placeholder="e.g., ITLL Room 123">
+            </div>
+          </div>
+
+          <!-- Remote Fields -->
+          <div id="remote_fields" class="d-none">
+            <div class="mb-3">
+              <label class="form-label">Remote URL</label>
+              <input
+                type="text"
+                id="event_remote_url"
+                class="form-control"
+                placeholder="https://zoom.us/..."
+                pattern="^https?:\/\/(www\.)?[\w-]+(\.[\w-]+)+([\/?#].*)?$"
+                title="Please enter a valid URL starting with http:// or https://">
+            </div>
+          </div>
+
+          <!-- Attendees -->
+          <div class="mb-3">
+            <label class="form-label">Attendees</label>
+            <input type="text"
+                   id="event_attendees"
+                   class="form-control"
+                   placeholder="Separate names with commas"
+                   required>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-primary" onclick="saveEvent()">
+            Save Event
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- Calendar UI -->
+<div class="container my-4">
+  <div class="row" id="calendar">
+
+    <div class="col-sm m-1 bg-white rounded p-2" id="monday">
+      <div class="fw-bold text-center">Monday</div>
+    </div>
+
+    <div class="col-sm m-1 bg-white rounded p-2" id="tuesday">
+      <div class="fw-bold text-center">Tuesday</div>
+    </div>
+
+    <div class="col-sm m-1 bg-white rounded p-2" id="wednesday">
+      <div class="fw-bold text-center">Wednesday</div>
+    </div>
+
+    <div class="col-sm m-1 bg-white rounded p-2" id="thursday">
+      <div class="fw-bold text-center">Thursday</div>
+    </div>
+
+    <div class="col-sm m-1 bg-white rounded p-2" id="friday">
+      <div class="fw-bold text-center">Friday</div>
+    </div>
+
+    <div class="col-sm m-1 bg-white rounded p-2" id="saturday">
+      <div class="fw-bold text-center">Saturday</div>
+    </div>
+
+    <div class="col-sm m-1 bg-white rounded p-2" id="sunday">
+      <div class="fw-bold text-center">Sunday</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your Script -->
+<script src="./resources/js/script.js"></script>
+
+</body>
+</html>
+
