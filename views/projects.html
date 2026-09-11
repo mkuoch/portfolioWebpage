@@ -20,8 +20,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../resources/css/style.css" />
   </head>
-<body class="default-page">
-  <body>
+  <body class="default-page">
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
@@ -63,139 +62,166 @@
     <!-- MAIN CONTENT -->
     <main>
       <!-- ACCORDION -->
-<div class="container my-4">
-  <div class="accordion" id="projectsAccordion">
+      <div class="container my-4">
+        <div class="accordion" id="projectsAccordion">
 
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button
-          class="accordion-button"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseOne"
-          aria-expanded="true"
-          aria-controls="collapseOne"
-        >
-          Digital Calendar 
-        </button>
-      </h2>
+          <!-- ACCORDION 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Digital Calendar
+              </button>
+            </h2>
 
-      <div
-        id="collapseOne"
-        class="accordion-collapse collapse show"
-        aria-labelledby="headingOne"
-        data-bs-parent="#projectsAccordion"
-      >
-        <div class="accordion-body">
-          
-          <!-- GRID INSIDE ACCORDION BODY -->
-          <div class="row align-items-center g-4">
-            
-            <!-- LEFT: IMAGE -->
-            <div class="col-12 col-md-4">
-              <img
-                src="../resources/img/cal.png"
-                alt="cal"
-                class="img-fluid rounded"
-                style="max-height: 180px; object-fit: contain;"
-              />
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#projectsAccordion"
+            >
+              <div class="accordion-body">
+                <div class="row align-items-center g-4">
+                  <div class="col-12 col-md-4">
+                    <img
+                      src="../resources/img/cal.png"
+                      alt="cal"
+                      class="img-fluid rounded"
+                      style="max-height: 180px; object-fit: contain;"
+                    />
+                  </div>
+                  <div class="col-12 col-md-8">
+                    <h5 class="fw-semibold mb-2">Interactive Modal-Based Scheduling System</h5>
+                    <p class="mb-3">
+                      Developed a responsive weekly calendar web application that supports event creation, editing, and category-based styling.
+                      Implemented dynamic DOM manipulation, conditional form rendering based on event modality (in-person vs. remote), and validation including URL pattern matching.
+                      Each event is stored in memory as a structured object and rendered dynamically to the appropriate weekday column.
+                    </p>
+                    <a href="../Calendar/index.html" class="btn btn-primary">View project</a>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <!-- RIGHT: TEXT -->
-            <div class="col-12 col-md-8">
-              <h5 class="fw-semibold mb-2">Interactive Modal-Based Sheduling System</h5>
-              <p class="mb-3">
-                Developed a responsive weekly calendar web application that supports event creation, editing, and category-based styling.
-Implemented dynamic DOM manipulation, conditional form rendering based on event modality (in-person vs. remote), and validation including URL pattern matching.
-Each event is stored in memory as a structured object and rendered dynamically to the appropriate weekday column.
-</p>
-              <a href="../Calendar/index.html" class="btn btn-primary">View project</a>
-            </div>
-
           </div>
+
+          <!-- ACCORDION 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#projTwo">
+                Camera Vision Automated Recycling Sorter
+              </button>
+            </h2>
+            <div id="projTwo" class="accordion-collapse collapse"
+              data-bs-parent="#projectsAccordion">
+              <div class="accordion-body">
+
+                <div class="row g-4">
+                  <!-- LEFT: VIDEO -->
+                  <div class="col-12 col-md-6">
+                    <video
+                      class="w-100 rounded shadow-sm"
+                      controls
+                      preload="metadata"
+                      style="max-height: 360px; background:#000;"
+                    >
+                      <source src="final-integration.mov" type="video/quicktime" />
+                      <source src="final-integration.mp4" type="video/mp4" />
+                      Your browser can't play this video.
+                      <a href="final-integration.mov">Download the final integration video</a>.
+                    </video>
+                    <p class="text-secondary small mt-2 mb-0">
+                      <i class="bi bi-camera-video me-1"></i>Final system integration
+                    </p>
+                  </div>
+
+                  <!-- RIGHT: TEXT -->
+                  <div class="col-12 col-md-6">
+                    <h5 class="fw-semibold mb-1">Camera Vision Automated Recycling Sorter</h5>
+                    <p class="text-secondary small mb-2">
+                      Summer Internship · CU Boulder ITLL · with Jaimen Whittenburg
+                    </p>
+                    <p class="mb-3">
+                      As summer interns, we simulated a GEEN 1400 freshman engineering
+                      project — an automated recycling system with a notoriously low
+                      pass rate — and documented every trial along the way to build an
+                      end-to-end guidebook for students and a reference for engineering
+                      support staff. The system uses a trained YOLO classification model
+                      and a Raspberry Pi to identify recyclable material from a camera
+                      image, then drives a rack-and-pinion platform and servo trap door
+                      to sort each item into the correct bin.
+                    </p>
+
+                    <p class="fw-semibold mb-2 small text-secondary text-uppercase">What it covers</p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                      <span class="badge text-bg-primary">Machine Learning &amp; Computer Vision</span>
+                      <span class="badge text-bg-primary">Raspberry Pi</span>
+                      <span class="badge text-bg-primary">Python</span>
+                      <span class="badge text-bg-primary">GPIO &amp; Motor Control</span>
+                      <span class="badge text-bg-primary">3D CAD &amp; Fabrication</span>
+                      <span class="badge text-bg-primary">System Integration</span>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2">
+                      <a href="REPLACE_WITH_GOOGLE_DOC_LINK" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i class="bi bi-file-earmark-text me-1"></i>Read the documentation
+                      </a>
+                      <a href="final-integration.mov" target="_blank" rel="noopener" class="btn btn-outline-primary">
+                        <i class="bi bi-play-circle me-1"></i>Open video
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#projThree">
+                Project Three
+              </button>
+            </h2>
+            <div id="projThree" class="accordion-collapse collapse"
+              data-bs-parent="#projectsAccordion">
+              <div class="accordion-body">
+                <div class="row align-items-center g-4">
+                  <div class="col-12 col-md-4">
+                    <img
+                      src="YOUR_IMAGE_3"
+                      class="img-fluid rounded"
+                      style="height:180px; width:100%; object-fit:cover;"
+                    />
+                  </div>
+                  <div class="col-12 col-md-8">
+                    <h5>Web Project</h5>
+                    <p>
+                      some description of a project.
+                    </p>
+                    <a href="projectDetails3" class="btn btn-primary">View project</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-
-     <!-- ACCORDION 2 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#projTwo">
-          Project Two
-        </button>
-      </h2>
-      <div id="projTwo" class="accordion-collapse collapse"
-        data-bs-parent="#projectsAccordion">
-        <div class="accordion-body">
-          <div class="row align-items-center g-4">
-
-            <div class="col-12 col-md-4">
-              <img
-                src="YOUR_IMAGE_2"
-                class="img-fluid rounded"
-                style="height:180px; width:100%; object-fit:cover;"
-              />
-            </div>
-
-            <div class="col-12 col-md-8">
-              <h5>Poster Design</h5>
-              <p>
-                Some description of the project
-              </p>
-              <a href="projectDetails2" class="btn btn-primary">View project</a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ACCORDION 3 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#projThree">
-          Project Three
-        </button>
-      </h2>
-      <div id="projThree" class="accordion-collapse collapse"
-        data-bs-parent="#projectsAccordion">
-        <div class="accordion-body">
-          <div class="row align-items-center g-4">
-
-            <div class="col-12 col-md-4">
-              <img
-                src="YOUR_IMAGE_3"
-                class="img-fluid rounded"
-                style="height:180px; width:100%; object-fit:cover;"
-              />
-            </div>
-
-            <div class="col-12 col-md-8">
-              <h5>Web Project</h5>
-              <p>
-                some description of  a project.
-              </p>
-              <a href="projectDetails3" class="btn btn-primary">View project</a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
- 
- 
     </main>
 
     <!-- FOOTER -->
     <footer class="border-top py-4">
       <div class="container d-flex justify-content-between align-items-center">
-        <span© 2026 Melody Kuoch</span>
+        <span>© 2026 Melody Kuoch</span>
 
         <div class="d-flex gap-3 fs-4">
           <a
@@ -214,4 +240,3 @@ Each event is stored in memory as a structured object and rendered dynamically t
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
